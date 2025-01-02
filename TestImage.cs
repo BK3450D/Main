@@ -12,19 +12,19 @@ namespace ConsoleApp6
         static void Main(string[] args)
         {
             Console.Write("Количество картинок? ");
-            int image = Convert.ToInt32 (Console.ReadLine());
+            int imagesAmount = Convert.ToInt32 (Console.ReadLine());
 
-            Console.Write("Количество рядов картинок? ");
-            int line = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Количество картинок в строке? ");
+            int picturesInRow = Convert.ToInt32(Console.ReadLine());
             
-            int imageInLine;
+            int  fullRows;
             int imageOwerCup;
 
-            imageInLine =  image / line;
-            imageOwerCup = image % line;
+            fullRows =  imagesAmount / picturesInRow;
+            imagesInLastRow = image % picturesInRow;
 
-            Console.WriteLine("Строк картинок: " + imageInLine);
-            Console.WriteLine("Картинок не вместилось: " + imageOwerCup);
+            Console.WriteLine("Строк картинок: " +  fullRows);
+            Console.WriteLine("Картинок не вместилось: " + imagesInLastRow);
         }
     }
 }
