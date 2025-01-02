@@ -8,9 +8,6 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            //   Console.InputEncoding = Encoding.Unicode; 
-            //    Console.OutputEncoding = Encoding.Unicode;
-
             bool canSell;
 
             string login;
@@ -30,12 +27,6 @@ namespace ConsoleApp1
             double mainDivide = 1.0;
 
             short checkTime;
-
-
-
-
-
-
 
 
 
