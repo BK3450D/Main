@@ -5,13 +5,16 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace ConsoleApp6 
+namespace ConsoleApp6
+    
 {
     
     internal class Program
+        
     {
         
         static void Main(string[] args)
+            
         {
             
             Console.Write("Количество картинок? ");
