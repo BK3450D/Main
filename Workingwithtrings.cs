@@ -5,16 +5,12 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-
 namespace ConsoleApp6 
 {
-
     internal class Program
     {
-
         static void Main(string[] args)
         {
-
             Console.InputEncoding = Encoding.Unicode;
             Console.OutputEncoding = Encoding.Unicode;
      
@@ -29,23 +25,7 @@ namespace ConsoleApp6
             string work = (Console.ReadLine());
 
             Console.WriteLine($"Вас зовут {name}, вам {age},  и вы работаете {work}.");
-            
-     
-
-        
-
-
-
-
-
-
-
-
-
-
-
         }
-
     }
 }
 
