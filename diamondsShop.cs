@@ -12,7 +12,6 @@ namespace ConsoleApp9
     {
         static void Main(string[] args)
         {
-         
             int gold;
             int diamonds;
             int diamondUnitPrice = 10;
