@@ -10,7 +10,6 @@ namespace clinic
     {
         static void Main(string[] args)
         {
-            
             int timeReceptionOnePerson = 10;
             int hourInMinutes = 60;
 
@@ -20,8 +19,6 @@ namespace clinic
             int waitingInHours = timeInMinuts / hourInMinutes;
             int waitingInMinutes = timeInMinuts % hourInMinutes;
             Console.WriteLine($"Вы должны отстоять в очереди {waitingInHours} часа и {waitingInMinutes} минут.");
-            
-
         }
     }
 }
