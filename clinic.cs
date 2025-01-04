@@ -14,7 +14,7 @@ namespace clinic
             int hourInMinutes = 60;
 
             Console.Write("Введите кол - во пациентов: ");
-            int  totalPersonInQueue = Convert.ToInt32(Console.ReadLine());
+            int totalPersonInQueue = Convert.ToInt32(Console.ReadLine());
             int timeInMinuts = totalPersonInQueue * timeReceptionOnePerson;
             int waitingInHours = timeInMinuts / hourInMinutes;
             int waitingInMinutes = timeInMinuts % hourInMinutes;
