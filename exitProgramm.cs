@@ -21,6 +21,7 @@ namespace ConsoleApp5
                 Console.Write("Повторите попытку: ");
                 userInput = Console.ReadLine();
             }
+            
             if (userInput == exitCommand)
             {
                 Console.WriteLine("Программа завершина");
