@@ -65,6 +65,7 @@ namespace Menu
                         break;
                 }
             }
+            
             if (userInput == exitCommand)
             {
                 Console.WriteLine("Программа завершина");
