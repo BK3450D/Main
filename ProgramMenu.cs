@@ -48,7 +48,7 @@ namespace Menu
 
                     case CommandRandomNumber:
                         Random random = new Random();
-                        int nunber = random.Next(0, maxRandom);
+                        int nunber = random.Next(maxRandom);
                         Console.WriteLine(nunber);
                         userInput = Console.ReadLine();
                         break;
