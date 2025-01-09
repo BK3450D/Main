@@ -22,7 +22,6 @@ namespace ConsoleApp9
             int maxRandom = 666;
             int numberOfCommands = 5;
 
-
             Console.WriteLine($"Введите цифру от 1 до {numberOfCommands} для выбора комманды");
             Console.WriteLine($"{CommandWhatyear}. Узнать какой сейчас год");
             Console.WriteLine($"{CommandlifeOnMars}. Есть ли жизнь на марсе.");
