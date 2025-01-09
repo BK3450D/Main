@@ -20,9 +20,8 @@ namespace ConsoleApp9
 
             int currentYear  = 2025;
             int maxRandom = 666;
-            int numberOfCommands = 5;
 
-            Console.WriteLine($"Введите цифру от {CommandWhatyear} до {numberOfCommands} для выбора комманды");
+            Console.WriteLine($"Введите цифру от {CommandWhatyear} до {exitCommand} для выбора комманды");
             Console.WriteLine($"{CommandWhatyear}. Узнать какой сейчас год");
             Console.WriteLine($"{CommandlifeOnMars}. Есть ли жизнь на марсе.");
             Console.WriteLine($"{CommandRandomNumber}. Показать случайное число. ");
