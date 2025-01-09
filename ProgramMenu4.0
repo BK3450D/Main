@@ -18,11 +18,11 @@ namespace ConsoleApp9
             string userInput;
             string exitCommand = "5";
 
-            int outputYearUser = 2025;
+            int currentYear  = 2025;
             int maxRandom = 666;
             int numberOfCommands = 5;
 
-            Console.WriteLine($"Введите цифру от 1 до {numberOfCommands} для выбора комманды");
+            Console.WriteLine($"Введите цифру от {CommandWhatyear} до {numberOfCommands} для выбора комманды");
             Console.WriteLine($"{CommandWhatyear}. Узнать какой сейчас год");
             Console.WriteLine($"{CommandlifeOnMars}. Есть ли жизнь на марсе.");
             Console.WriteLine($"{CommandRandomNumber}. Показать случайное число. ");
@@ -36,7 +36,7 @@ namespace ConsoleApp9
                 switch (userInput)
                 {
                     case CommandWhatyear:
-                        Console.WriteLine($"Сейчас {outputYearUser} год");
+                        Console.WriteLine($"Сейчас {currentYear} год");
                         userInput = Console.ReadLine();
                         break;
 
