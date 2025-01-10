@@ -72,7 +72,6 @@ namespace ConsoleApp10
                 }
                 switch (desiredOperation)
                 {
-
                     case CommandRUBtoUSD://1
                         Console.WriteLine("Обмен RUB на USD.");
                         Console.Write("Сумма RUB для обмена: ");
