@@ -55,7 +55,6 @@ namespace ConsoleApp14
             while (canExit == false)
             {
                 Console.WriteLine("Ваш баланс:");
-
                 Console.WriteLine($"RUB: {balanceRub}");
                 Console.WriteLine($"USD: {balanceUsd}");
                 Console.WriteLine($"EUR: {balanceEur}");
