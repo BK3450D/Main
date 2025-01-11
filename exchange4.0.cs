@@ -68,7 +68,6 @@ namespace ConsoleApp14
                 Console.WriteLine($"{CommandExit}. Выход.");
 
                 Console.Write("Ваш выбор: ");
-
                 string desiredOperation = Console.ReadLine();
 
                 switch (desiredOperation)
