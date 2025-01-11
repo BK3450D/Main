@@ -26,7 +26,7 @@ namespace ConsoleApp14
 
             float rubToUsd = 0.013f, rubToEur = 0.011f;
             float usdToRub = 75f, usdToEur = 0.85f;
-            float eurtoRub = 88f, eurToUsd = 1.18f;
+            float eurToRub = 88f, eurToUsd = 1.18f;
 
             Console.WriteLine("Добро пожаловать в обмен валют!");
 
@@ -166,7 +166,7 @@ namespace ConsoleApp14
                         if (exchangeCurrencyCount >= 0 && balanceEur >= exchangeCurrencyCount)
                         {
                             balanceEur -= exchangeCurrencyCount;
-                            balanceRub += exchangeCurrencyCount * eurtoRub;
+                            balanceRub += exchangeCurrencyCount * eurToRub;
                         }
                         else
                         {
