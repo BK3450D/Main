@@ -10,7 +10,6 @@ namespace ConsoleApp12
     {
         static void Main(string[] args)
         {
-
             const string CommandRubToUsd = "1";
             const string CommandRubToEur = "2";
             const string CommandUsdToRub = "3";
@@ -30,10 +29,13 @@ namespace ConsoleApp12
             float eurtoRUB = 3.61f, eurToUsd = 1.0458f;
 
             Console.WriteLine("Добро пожаловать в обмен валют!");
+            
             Console.Write("Введите баланс RUB: ");
             balanceRub = Convert.ToSingle(Console.ReadLine());
+            
             Console.Write("Введите баланс USD: ");
             balanceUsd = Convert.ToSingle(Console.ReadLine());
+            
             Console.Write("Введите баланс EUR: ");
             balanceEur = Convert.ToSingle(Console.ReadLine());
 
@@ -53,7 +55,6 @@ namespace ConsoleApp12
             while (!exit)
             {
                 Console.WriteLine("Ваш баланс:");
-
                 Console.WriteLine($"RUB: {balanceRub}");
                 Console.WriteLine($"USD: {balanceUsd}");
                 Console.WriteLine($"EUR: {balanceEur}");
@@ -67,7 +68,6 @@ namespace ConsoleApp12
                 Console.WriteLine($"{CommandExit}. Выход.");
 
                 Console.Write("Ваш выбор: ");
-
                 string desiredOperation = Console.ReadLine();
 
                 switch (desiredOperation)
@@ -76,7 +76,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен RUB на USD.");
 
                         Console.Write("Сумма RUB для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceRub >= exchangeCurrencyCount)
@@ -95,7 +94,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен RUB на EUR.");
 
                         Console.Write("Сумма RUB для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceRub >= exchangeCurrencyCount)
@@ -114,7 +112,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен USD на RUB.");
 
                         Console.Write("Сумма USD для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceUsd >= exchangeCurrencyCount)
@@ -133,7 +130,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен USD на EUR.");
 
                         Console.Write("Сумма USD для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceUsd >= exchangeCurrencyCount)
@@ -152,7 +148,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен EUR на USD.");
 
                         Console.Write("Сумма EUR для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceEur >= exchangeCurrencyCount)
@@ -171,7 +166,6 @@ namespace ConsoleApp12
                         Console.WriteLine("Обмен EUR на RUB.");
 
                         Console.Write("Сумма EUR для обмена: ");
-
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
 
                         if (exchangeCurrencyCount >= 0 && balanceEur >= exchangeCurrencyCount)
