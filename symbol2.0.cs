@@ -25,7 +25,6 @@ namespace symbol
             Console.Write("Введите символ: ");
             userSymbol = Convert.ToChar(Console.ReadLine());
 
-            
             middleLine = userSymbol + userName + userSymbol;
 
             frameWidth = middleLine.Length;
