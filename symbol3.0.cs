@@ -10,7 +10,6 @@ namespace ConsoleApp20
     {
         static void Main(string[] args)
         {
-
             string userName;
             string middleLine;
 
