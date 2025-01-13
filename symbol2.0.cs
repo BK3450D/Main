@@ -15,7 +15,6 @@ namespace symbol
             int frameWidth;
 
             string userName;
- 
             string middleLine;
 
             char userSymbol;
