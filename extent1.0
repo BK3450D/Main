@@ -27,7 +27,7 @@ namespace ConsoleApp21
                 extent++;
             }
 
-            Console.WriteLine($"Минимальная степень двойки: {numberToExtent} в {extent} степени = {result}");
+            Console.WriteLine($"Минимальная степень {numberToExtent}: {numberToExtent} в {extent} степени = {result}");
         }
     }
 }
