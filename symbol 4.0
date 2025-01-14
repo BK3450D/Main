@@ -12,8 +12,7 @@ namespace ConsoleApp1
         {
             string userName;
             string middleLine;
-            
-
+    
             char userSymbol;
 
             Console.Write("Введите имя: ");
