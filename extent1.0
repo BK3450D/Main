@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp21
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int minRandom = 0;
+            int maxRandom = 10000;
+            int numberToExtent = 2;
+            int extent = 0;
+            int result = 1;
+
+            Random random = new Random();
+            int number = random.Next(minRandom, maxRandom);
+
+            Console.WriteLine($"Случайное число от {minRandom} до {maxRandom} число: {number}");
+
+            while (result <= number)
+            {
+                result *= numberToExtent;
+                extent++;
+            }
+
+            Console.WriteLine($"Минимальная степень двойки: {numberToExtent} в {extent} степени = {result}");
+        }
+    }
+}
+
