@@ -27,7 +27,7 @@ namespace ConsoleApp23
             {
                 int count = minValue;
 
-                while (count > countDuration)
+                while (count > 0)
                 {
                     count -= nunber;
                 }
