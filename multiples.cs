@@ -15,8 +15,8 @@ namespace ConsoleApp24
             int minValue = 50;
             int maxValue = 150;
 
-            Random random = new Random();
-            int randomNunber = random.Next(minRandom, maxRandom);
+            Random rand = new Random();
+            int randomNunber = rand.Next(minRandom, maxRandom);
 
             Console.WriteLine($"Сгенерированное число: {randomNunber}");
 
