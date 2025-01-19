@@ -7,13 +7,13 @@ namespace ConsoleApp25
     {
         static void Main(string[] args)
         {
-            int maxRandom = 26;
+            int maxRandom = 25;
             int minRandom = 10;
             int minValue = 50;
             int maxValue = 150;
 
             Random random = new Random();
-            int randomNunber = random.Next(minRandom, maxRandom);
+            int randomNunber = random.Next(minRandom, maxRandom +1);
 
             Console.WriteLine($"Сгенерированное число: {randomNunber}");
 
