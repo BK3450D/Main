@@ -4,42 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp23
+namespace ConsoleApp24
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int maxRandom = 25;
+            int maxRandom = 26;
             int minRandom = 10;
-
             int minValue = 50;
             int maxValue = 150;
 
-            int countDuration = 0;
-
             Random random = new Random();
-            int nunber = random.Next(minRandom, maxRandom);
+            int randomNunber = random.Next(minRandom, maxRandom);
 
-            Console.WriteLine($"Генерация случайного числа = {nunber}");
+            Console.WriteLine($"Сгенерированное число: {randomNunber}");
 
-            while (minValue <= maxValue)
+            int count = 0;
+
+            for (int i = minValue; i <= maxValue; i++)
             {
-                int count = minValue;
+                int sum = 0;
 
-                while (count > 0)
+                for (int j = 0; sum < i; j++)
                 {
-                    count -= nunber;
+                    sum += randomNunber;
                 }
 
-                if (count == 0)
+                if (sum == i)
                 {
-                    countDuration++;
+                    count++;
                 }
-
-                minValue++;
             }
-            Console.WriteLine($"Количество чисел от {minValue} до {maxValue}, кратных {nunber}: {countDuration}");
+
+            Console.WriteLine($"Количество чисел от {minValue} до {maxValue}, кратных {randomNunber}: {count}");
         }
     }
 }
