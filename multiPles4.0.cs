@@ -20,7 +20,6 @@ namespace ConsoleApp27
 
             for (int i = 0; i <= maxValue; i += randomNunber)
             {
-
                 if (i >= minValue)
                 {
                     count++;
@@ -30,5 +29,4 @@ namespace ConsoleApp27
             Console.WriteLine($"Количество чисел от {minValue} до {maxValue}, кратных {randomNunber}: {count}");
         }
     }
-    
 }
