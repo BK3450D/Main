@@ -135,16 +135,14 @@ namespace ConsoleApp27
                 }
             }
 
-            if (playerHealth <= 0 && bossHealth <= 0)
-            {
-                Console.WriteLine("Ничья! Оба были повержены!");
-            }
-
-            else if (bossHealth <= 0)
+            if (bossHealth <= 0)
              {
                  Console.WriteLine("Босс повержен! Вы победили!");    
              }
- 
+            else if (playerHealth <= 0 && bossHealth <= 0)
+            {
+                Console.WriteLine("Ничья! Оба были повержены!");
+            }
              else if (playerHealth <= 0)
              {
                     Console.WriteLine("Вы проиграли.");
