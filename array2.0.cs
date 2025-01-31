@@ -32,7 +32,7 @@ namespace ConsoleApp29
                 }
                 Console.WriteLine();
             }
-
+            
             int lineSum = 0;
 
             for (int i = 0; i < rows; i++)
