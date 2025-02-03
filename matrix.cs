@@ -43,6 +43,7 @@ namespace ConsoleApp29
                     }
                 }
             }
+            
             for (int i = 0; i < line; i++)
             {
                 for (int j = 0; j < rows; j++)
@@ -53,7 +54,7 @@ namespace ConsoleApp29
                     }
                 }
             }
-
+            
             Console.WriteLine(" ");
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -65,6 +66,7 @@ namespace ConsoleApp29
                 }
                 Console.WriteLine();
             }
+            
             Console.WriteLine();
             Console.WriteLine($"Максимальное значение матрицы: {maxNumber}");
         }
