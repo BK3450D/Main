@@ -43,14 +43,15 @@ namespace ConsoleApp29
                     }
                 }
             }
-            
+
+            int numberReplacement = 0;
             for (int i = 0; i < line; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
                     if (array[i, j] == maxNumber)
                     {
-                        array[i, j] = 0;
+                        array[i, j] = numberReplacement;
                     }
                 }
             }
