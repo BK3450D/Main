@@ -1,58 +1,62 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleApp30
+namespace ConsoleApp31
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int[] array = new int[30];
+            int size = 30;
+            int[] numbers = new int[size];
 
             int maxRandom = 100;
             int minRandom = 1;
+
             int step = 1;
 
             Random random = new Random();
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                array[i] = random.Next(minRandom, maxRandom + 1);
+                numbers[i] = random.Next(minRandom, maxRandom + 1);
 
-                Console.Write(array[i] + " ");
+                Console.Write(numbers[i] + " ");
             }
 
-            for (int i = 0; i < array.Length; i++)
+            int lastNunber = numbers[numbers.Length - 1];
+            int penultimateNumber = numbers[numbers.Length - 2];
+
+            if (numbers[0] > numbers[1])
+            {
+                Console.WriteLine();
+                Console.WriteLine(numbers[0]);
+            }
+            if (lastNunber > penultimateNumber)
+            {
+                Console.WriteLine();
+                Console.WriteLine(lastNunber);
+            }
+
+            for (int i = 1; i < numbers.Length; i++)
             {
                 bool isLocalMax = false;
 
-                if (i == 0)
+                if (numbers[i] > numbers[i - step] && numbers[i] > numbers[i + step])
                 {
-                    if (array[i] > array[i + step])
-                    {
-                        isLocalMax = true;
-                    }
-                }
-                else if (i == array.Length - 1)
-                {
-                    if (array[i] > array[i - step])
-                    {
-                        isLocalMax = true;
-                    }
-                }
-                else
-                {
-                    if (array[i] > array[i - step] && array[i] > array[i + step])
-                    {
-                        isLocalMax = true;
-                    }
+                    isLocalMax = true;
                 }
 
                 if (isLocalMax == true)
                 {
+                    Console.Write(numbers[i]);
                     Console.WriteLine();
-                    Console.Write(array[i]);
                 }
             }
         }
     }
 }
+
