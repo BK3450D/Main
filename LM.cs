@@ -33,11 +33,6 @@ namespace ConsoleApp2
             {
                 bool isLocalMax = numbers[i] > numbers[i - step] && numbers[i] > numbers[i + step];
 
-                if (isLocalMax)
-                {
-                    isLocalMax = true;
-                }
-
                 if (isLocalMax == true)
                 {
                     Console.Write(numbers[i]);
