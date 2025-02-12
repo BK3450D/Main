@@ -6,6 +6,7 @@ namespace arrayRepitsNumbers
     {
         static void Main(string[] args)
         {
+
             int[] number = new int[30];
 
             int maxRandom = 5;
@@ -23,7 +24,7 @@ namespace arrayRepitsNumbers
             {
                 number[i] = random.Next(minRandom, maxRandom + 1);
 
-                Console.Write(number[i] + " ");
+                Console.Write(number[i] + ",");
             }
 
             for (int i = 0; i < number.Length; i++)
@@ -45,7 +46,7 @@ namespace arrayRepitsNumbers
                 }
             }
 
-            Console.Write($"\nБольше всего повторяется число: {maxRepeatNumber}.\nЧисло повторений: {maxRepeat}.");
+            Console.Write($" - число {maxRepeatNumber} повторяется {maxRepeat} раза подряд.");
         }
     }
 }
