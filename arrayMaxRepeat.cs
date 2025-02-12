@@ -6,7 +6,6 @@ namespace arrayRepitsNumbers
     {
         static void Main(string[] args)
         {
-
             int[] number = new int[30];
 
             int maxRandom = 5;
