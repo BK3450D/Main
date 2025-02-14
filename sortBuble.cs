@@ -6,41 +6,41 @@ namespace numberSorting
     {
         static void Main(string[] args)
         {
-            int[] numbersArray = new int[10];
+            int[] arrayNumbers = new int[10];
 
             int maxRandomNumber = 10;
             int minRandomNumber = 1;
 
             Random random = new Random();
 
-            for (int i = 0; i < numbersArray.Length; i++)
+            for (int i = 0; i < arrayNumbers.Length; i++)
             {
-                numbersArray[i] = random.Next(minRandomNumber, maxRandomNumber + 1);
+                arrayNumbers[i] = random.Next(minRandomNumber, maxRandomNumber + 1);
 
-                Console.Write(numbersArray[i] + " | ");
+                Console.Write(arrayNumbers[i] + " | ");
 
             }
 
             Console.WriteLine("Изначальный масcив");
 
-            for (int i = 0; i < numbersArray.Length; i++)
+            for (int i = 0; i < arrayNumbers.Length; i++)
             {
-                for (int j = 0; j < numbersArray.Length - 1; j++)
+                for (int j = 0; j < arrayNumbers.Length - 1; j++)
                 {
-                    if (numbersArray[j] > numbersArray[j + 1])
+                    if (arrayNumbers[j] > arrayNumbers[j + 1])
                     {
-                        int temp = numbersArray[j];
-                        numbersArray[j] = numbersArray[j + 1];
-                        numbersArray[j + 1] = temp;
+                        int temp = arrayNumbers[j];
+                        arrayNumbers[j] = arrayNumbers[j + 1];
+                        arrayNumbers[j + 1] = temp;
                     }
                 }
             }
 
-
-            foreach (var item in numbersArray)
+            foreach (var item in arrayNumbers)
             {
                 Console.Write(item + " | ");
             }
+            
             Console.WriteLine("Отсортированный массив");
         }
     }
