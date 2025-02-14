@@ -6,12 +6,12 @@ namespace arrayRepitsNumbers
     {
         static void Main(string[] args)
         {
-            int[] number = new int[30];
 
-            int maxRandom = 5;
-            int minRandom = 1;
+            int[] numbers = new int[30];
 
-            int count = number[0];
+            int maxNumber = 5;
+            int minNumber = 1;
+
             int repeatCount = 0;
 
             int maxRepeat = 0;
@@ -19,28 +19,28 @@ namespace arrayRepitsNumbers
 
             Random random = new Random();
 
-            for (int i = 0; i < number.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                number[i] = random.Next(minRandom, maxRandom + 1);
+                numbers[i] = random.Next(minNumber, maxNumber + 1);
 
-                Console.Write(number[i] + ",");
+                Console.Write(numbers[i] + ",");
             }
 
-            for (int i = 0; i < number.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                if (number[i] == count)
+                if (numbers[i] == numbers[0])
                 {
                     repeatCount++;
 
                     if (repeatCount > maxRepeat)
                     {
                         maxRepeat = repeatCount;
-                        maxRepeatNumber = count;
+                        maxRepeatNumber = numbers[0];
                     }
                 }
                 else
                 {
-                    count = number[i];
+                    numbers[0] = numbers[i];
                     repeatCount = 1;
                 }
             }
