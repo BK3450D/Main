@@ -42,7 +42,6 @@ namespace ConsoleApp6
                 {
                     Console.Write(arrayNumbers[i] + " | ");
                 }
-            }
         }
     }
 }
