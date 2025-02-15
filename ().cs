@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Введите ( ) для пороверки: ");
+        Console.Write("Введите ( ) для пороверки корректности: ");
 
         string input = Console.ReadLine();
 
@@ -45,12 +45,12 @@ class Program
 
         if (isValid)
         {
-            Console.WriteLine("Строка является корректным скобочным выражением.");
+            Console.WriteLine("Строка является корректным выражением.");
             Console.WriteLine($"Максимальная глубина: {maxDepth}");
         }
         else
         {
-            Console.WriteLine("Не является корректным скобочным выражением.");
+            Console.WriteLine("Не является корректным выражением.");
         }
     }
 }
