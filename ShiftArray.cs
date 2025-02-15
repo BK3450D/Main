@@ -6,7 +6,6 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            {
                 int sizeNumbersArray = 10;
 
                 int[] arrayNumbers = new int[sizeNumbersArray];
