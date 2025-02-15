@@ -1,23 +1,26 @@
-﻿using System;
+using System;
 
 class Program
 {
     static void Main()
     {
-        Console.Write("Введите ( ) для пороверки корректности: ");
-
-        string input = Console.ReadLine();
+        char leftBracket = '(';
+        char rightBracket = ')';
 
         int depth = 0;
         int maxDepth = 0;
 
         bool isValid = true;
 
+        Console.Write($"Введите {leftBracket}  {rightBracket} для пороверки: ");
+
+        string input = Console.ReadLine();
+
         for (int i = 0; i < input.Length; i++)
         {
             char currentSymbol = input[i];
 
-            if (currentSymbol == '(')
+            if (currentSymbol == leftBracket)
             {
                 depth++;
 
@@ -26,7 +29,7 @@ class Program
                     maxDepth = depth;
                 }
             }
-            else if (currentSymbol == ')')
+            else if (currentSymbol == rightBracket)
             {
                 depth--;
 
@@ -45,12 +48,12 @@ class Program
 
         if (isValid)
         {
-            Console.WriteLine("Строка является корректным выражением.");
+            Console.WriteLine("Строка является корректным скобочным выражением.");
             Console.WriteLine($"Максимальная глубина: {maxDepth}");
         }
         else
         {
-            Console.WriteLine("Не является корректным выражением.");
+            Console.WriteLine("Не является корректным скобочным выражением.");
         }
     }
 }
