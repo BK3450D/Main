@@ -21,6 +21,7 @@ class Program
         while (true)
         {
             Console.Write("Пожалуйста, введите число: ");
+            
             string input = Console.ReadLine();
 
             if (int.TryParse(input, out result))
