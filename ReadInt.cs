@@ -25,9 +25,7 @@ class Program
 
             if (int.TryParse(input, out result))
             {
-
                 return result;
-
             }
             else
             {
