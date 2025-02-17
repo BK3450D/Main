@@ -8,6 +8,7 @@ namespace healsbar
         {
             int health = 4, maxHealth = 10;
             int mana = 9, maxMana = 10;
+            
             DrawBars(health, maxHealth, 0, '#');
             DrawBars(mana, maxMana, 1, '&');
             
