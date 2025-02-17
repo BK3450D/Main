@@ -15,7 +15,7 @@ namespace healsbar
         
         static void DrawBars(int value, int maxValue, int position, char symbol = '|')
         {
-            char startOfHealthBox = '[', endOfHealthBox = ']';
+            char startOfBarhBox = '[', endOfBarhBox = ']';
 
             string bar = "";
 
@@ -25,7 +25,7 @@ namespace healsbar
             }
 
             Console.SetCursorPosition(0, position);
-            Console.Write(startOfHealthBox);
+            Console.Write(startOfBarBox);
             Console.Write(bar);
 
             bar = "";
@@ -35,7 +35,7 @@ namespace healsbar
                 bar += "_";
             }
 
-            Console.Write(bar + endOfHealthBox);
+            Console.Write(bar + endOfBarBox);
         }
     }
 }
