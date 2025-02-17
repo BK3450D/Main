@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         int number = GetNumber();
+        
         Console.WriteLine($"Вы ввели число: {number}");
     }
     static void WriteError()
@@ -17,6 +18,7 @@ class Program
     static int GetNumber()
     {
         int result = 0;
+        
         bool isValue = true;
 
         while (isValue)
