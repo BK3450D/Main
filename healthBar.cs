@@ -11,8 +11,8 @@ namespace healsbar
             
             DrawBars(health, maxHealth, 0, '#');
             DrawBars(mana, maxMana, 1, '&');
-            
         }
+        
         static void DrawBars(int value, int maxValue, int position, char symbol = '|')
         {
             char startOfHealthBox = '[', endOfHealthBox = ']';
