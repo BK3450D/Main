@@ -15,7 +15,7 @@ namespace healsbar
         
         static void DrawBars(int value, int maxValue, int position, char symbol = '|')
         {
-            char startOfBarhBox = '[', endOfBarhBox = ']';
+            char startOfBarhBox = '[', endOfBarBox = ']';
 
             string bar = "";
 
