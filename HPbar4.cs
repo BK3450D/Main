@@ -22,9 +22,9 @@ namespace ConsoleApp13
             int percent = barLength * maxPercent / healthProcent;
 
             DrawBars(healthProcent, barLength);
-
             DrawBars(manaProcent, barLength);
         }
+        
         static void DrawBars(int percent, int barLength)
         {
             int symbolCount = barLength * percent / 100;
