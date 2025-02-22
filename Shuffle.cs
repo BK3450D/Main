@@ -9,8 +9,9 @@ namespace shafl
             int[] numbers = new int[10];
 
             int minRandomNumbers = 0, maxRandomNumbers = 9;
-
+            
             Random random = new Random();
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = random.Next(minRandomNumbers, maxRandomNumbers);
