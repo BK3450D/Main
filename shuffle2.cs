@@ -26,13 +26,13 @@ namespace shafl
 
             PrintArray(numbersArray);
         }
+        
         static void Shuffle(int[] numbersArray)
         {
            Random random = new Random();
 
             int minIndex = 0;
             int maxIndex = numbersArray.Length - 1;
-
 
             for (int i = 0; i < numbersArray.Length; i++)
             {
@@ -44,6 +44,7 @@ namespace shafl
                 numbersArray[i] = tempNumber;
             }
         }
+        
         static void PrintArray(int[] numbers)
         {
             foreach (int number in numbers)
