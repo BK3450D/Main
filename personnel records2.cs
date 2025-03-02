@@ -27,7 +27,7 @@ namespace ConsoleApp14
                 Console.WriteLine("1.Добавить досье.");
                 Console.WriteLine("2.Вывести досье.");
                 Console.WriteLine("3.Удалить досье.");
-                Console.WriteLine("4.Поиск по и.");
+                Console.WriteLine("4.Поиск по Ф.И.О.");
                 Console.WriteLine("5.выход.");
                 Console.WriteLine();
                 Console.Write("Ваш выбор: ");
