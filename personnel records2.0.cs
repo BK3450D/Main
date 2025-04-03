@@ -12,8 +12,7 @@ namespace ConsoleApp16
             const string CommandDeletDossier = "3";
             const string CommandFindByLastName = "4";
             const string CommandexitCommand = "5";
-
-            
+         
             string position;
             string initials;
             string firstName;
@@ -85,11 +84,9 @@ namespace ConsoleApp16
             string initials = ($"{lastName} {firstName} {surName}");
 
             fullName = IncreaseArraySize( fullName, initials);
-
             jobTitle = IncreaseArraySize( jobTitle, position);
 
             Console.WriteLine("\nДосье добавлено.\n");
-
         }
 
         static string[] IncreaseArraySize(string[] dataArray, string initials)
@@ -104,7 +101,6 @@ namespace ConsoleApp16
             tempArray[tempArray.Length - 1] = initials;
            
             return tempArray;
-            
         }
 
         static void ShowDossier(string[] names, string[] jobTitle, int index, string[] fullName)
