@@ -24,7 +24,6 @@ namespace ConsoleApp16
                 Console.WriteLine($"{CommandDeletDossier}.Удалить досье.");
                 Console.WriteLine($"{CommandFindByLastName}.Поиск по фамилии");
                 Console.WriteLine($"{CommandexitCommand}.выход.");
-
                 Console.Write("\nВаш выбор: ");
 
                 string userInput = Console.ReadLine();
@@ -113,8 +112,6 @@ namespace ConsoleApp16
             {
                 Console.WriteLine("\nДосе не найдено\n");
             }
-
-
         }
 
         static void RequestDossierRemoval(ref string[] fullName, ref string[] position)
@@ -130,7 +127,6 @@ namespace ConsoleApp16
             if (number < 1 || number > fullName.Length)
             {
                 Console.WriteLine("\nДосье под таким номером нет\n");
-
                 return;
             }
 
@@ -143,11 +139,10 @@ namespace ConsoleApp16
         static string[] ReduceArraySize(string[] fullName, int fileNumber)
         {
             if (fileNumber >= fullName.Length || fileNumber < 0)
-
             {
                 return fullName;
             }
-
+            
             if (fullName.Length > fileNumber)
             {
                 string[] templateArray = new string[fullName.Length - 1];
@@ -156,7 +151,6 @@ namespace ConsoleApp16
                 {
                     templateArray[i] = fullName[i];
                 }
-
                 for (int i = fileNumber + 1; i < fullName.Length; i++)
                 {
                     templateArray[i - 1] = fullName[i];
@@ -221,9 +215,7 @@ namespace ConsoleApp16
                 if (int.TryParse(input, out result))
                 {
                     isValue = false;
-
                 }
-
                 else
                 {
                     isValue = false;    
