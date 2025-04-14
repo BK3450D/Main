@@ -33,8 +33,7 @@ namespace movetest1
             while (true)
             {
                 Console.Clear();
-
-
+                
                 DrawMap(map);
                 Console.SetCursorPosition(startingPositionX, startingPositionY);
                 Console.WriteLine(playerIcon);
