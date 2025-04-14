@@ -26,15 +26,11 @@ namespace movetest1
 
             int count = 0;
 
-            bool canMove = false;
-
             char playerIcon = '@';
             char walls = '#';
             char emptyСell = ' ';
             char money = '*';
-
-
-
+            
             while (true)
             {
                 Console.Clear();
@@ -45,14 +41,13 @@ namespace movetest1
 
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
 
-                HandleInput(pressedKey, ref startingPositionX, ref startingPositionY, map, walls, money, count, ref canMove);
+                HandleInput(pressedKey, ref startingPositionX, ref startingPositionY, map, walls, money, count);
             }
         }
 
-        private static void HandleInput(ConsoleKeyInfo pressedKey, ref int positionX, ref int positionY, char[,] map, char walls, char money, int count, ref bool canMove)
+        private static void HandleInput(ConsoleKeyInfo pressedKey, ref int positionX, ref int positionY, char[,] map, char walls, char money, int count)
         {
             int[] direction = GetDirectionOfMove(pressedKey);
-
 
             int positionXIndex = 1;
             int positionYIndex = 0;
@@ -64,14 +59,8 @@ namespace movetest1
             {
                 positionX = nextPositionX;
                 positionY = nextPositionY;
-
-                canMove = true;
             }
-
         }
-
-
-
 
         static void DrawMap(char[,] map)
         {
@@ -103,7 +92,6 @@ namespace movetest1
                 case ConsoleKey.RightArrow:
                     MoveRight(ref directionOfMovement);
                     break;
-
             }
 
             return directionOfMovement;
