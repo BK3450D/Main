@@ -1,5 +1,4 @@
-﻿using System;
-
+using System;
 
 namespace movetest1
 {
@@ -10,9 +9,9 @@ namespace movetest1
             char[,] map =
             {
               {'#','#','#','#','#','#','#','#','#','#','#', },
-              {'#',' ',' ','#',' ',' ',' ',' ',' ',' ','#', },
-              {'#',' ',' ','#',' ',' ',' ','#','#',' ','#', },
-              {'#',' ','*','*',' ',' ',' ','#','#',' ','#', },
+              {'#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#', },
+              {'#',' ',' ',' ',' ',' ',' ','#','#',' ','#', },
+              {'#',' ',' ',' ',' ',' ',' ','#','#',' ','#', },
               {'#',' ',' ','#',' ',' ',' ',' ',' ',' ','#', },
               {'#','#','#','#','#','#','#','#','#','#','#', },
             };
@@ -30,7 +29,7 @@ namespace movetest1
             char walls = '#';
             char emptyСell = ' ';
             char money = '*';
-            
+
             while (true)
             {
                 Console.Clear();
@@ -48,9 +47,6 @@ namespace movetest1
         private static void HandleInput(ConsoleKeyInfo pressedKey, ref int positionX, ref int positionY, char[,] map, char walls, char money, int count)
         {
             int[] direction = GetDirectionOfMove(pressedKey);
-
-            int positionXIndex = 1;
-            int positionYIndex = 0;
 
             int nextPositionX = positionX + direction[0];
             int nextPositionY = positionY + direction[1];
