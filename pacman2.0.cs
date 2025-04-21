@@ -90,6 +90,7 @@ namespace movetest1
                 {
                     Console.Write(map[i, j]);
                 }
+                
                 Console.WriteLine();
             }
         }
