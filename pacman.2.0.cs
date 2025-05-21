@@ -38,7 +38,9 @@ namespace movetest1
                 Console.Clear();
 
                 DrawMap(map);
+                
                 DrowPlayer(startingPositionX, startingPositionY, playerIcon, map);
+                
                 DrowScore(score);
 
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
