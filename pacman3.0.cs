@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace movetest1
 {
@@ -22,6 +22,8 @@ namespace movetest1
 
             int startingPositionX = 1;
             int startingPositionY = 1;
+            int nextPositionX;
+            int nextPositionY;
             int score = 0;
             int maxScore = 10;
 
@@ -37,18 +39,16 @@ namespace movetest1
                 Console.Clear();
 
                 DrawMap(map);
-                DrawPlayer(startingPositionX, startingPositionY, playerIcon,map);
+                DrawPlayer(startingPositionX, startingPositionY, playerIcon, map);
                 DrawScore(score);
 
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
-                int[] direction = GetDirection(pressedKey);
 
-                int nextPositionX = startingPositionX + direction[0];
-                int nextPositionY = startingPositionY + direction[1];
+                GetNextPosition(pressedKey, startingPositionX, startingPositionY, out nextPositionX, out nextPositionY);
 
                 if (CanMove(nextPositionX, nextPositionY, map, wall))
                 {
-                    MovePlayer(direction, ref startingPositionX, ref startingPositionY);
+                    MovePlayer(nextPositionX, nextPositionY, ref startingPositionX, ref startingPositionY);
 
                     score = IncreaseScore(startingPositionX, startingPositionY, money, map, score, emptyCell);
                 }
@@ -62,6 +62,14 @@ namespace movetest1
                     isRunning = false;
                 }
             }
+        }
+
+        static void GetNextPosition(ConsoleKeyInfo pressedKey, int positionX, int positionY, out int nextPositionX, out int nextPositionY)
+        {
+            int[] direction = GetDirection(pressedKey);
+
+            nextPositionX = positionX + direction[0];
+            nextPositionY = positionY + direction[1];
         }
 
         private static void DrawScore(int score)
@@ -85,10 +93,10 @@ namespace movetest1
             return map[nextPositionY, nextPositionX] != wall;
         }
 
-        private static void MovePlayer(int[] direction, ref int positionX, ref int positionY)
+        private static void MovePlayer(int nextPositionX, int nextPositionY, ref int positionX, ref int positionY)
         {
-            positionX += direction[0];
-            positionY += direction[1];
+            positionX = nextPositionX;
+            positionY = nextPositionY;
         }
 
         private static int IncreaseScore(int x, int y, char money, char[,] map, int score, char emptyCell)
