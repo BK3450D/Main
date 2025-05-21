@@ -44,7 +44,7 @@ namespace movetest1
 
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
 
-                GetNextPosition(pressedKey, startingPositionX, startingPositionY, out nextPositionX, out nextPositionY);
+                GetNextPacmanPosition(pressedKey, startingPositionX, startingPositionY, out nextPositionX, out nextPositionY);
 
                 if (CanMove(nextPositionX, nextPositionY, map, wall))
                 {
@@ -64,12 +64,12 @@ namespace movetest1
             }
         }
 
-        static void GetNextPosition(ConsoleKeyInfo pressedKey, int positionX, int positionY, out int nextPositionX, out int nextPositionY)
+        static void GetNextPacmanPosition(ConsoleKeyInfo pressedKey, int pacmanPositionX, int pacmanPositionY, out int nextPacmanPositionX, out int nextPacmanPositionY)
         {
             int[] direction = GetDirection(pressedKey);
 
-            nextPositionX = positionX + direction[0];
-            nextPositionY = positionY + direction[1];
+            nextPacmanPositionX = pacmanPositionX + direction[0];
+            nextPacmanPositionY = pacmanPositionY + direction[1];
         }
 
         private static void DrawScore(int score)
@@ -131,26 +131,26 @@ namespace movetest1
 
         private static int[] GetDirection(ConsoleKeyInfo pressedKey)
         {
-            ConsoleKey moveUpCommand = ConsoleKey.UpArrow;
-            ConsoleKey moveDown = ConsoleKey.DownArrow;
-            ConsoleKey moveLeft = ConsoleKey.LeftArrow;
-            ConsoleKey moveReght = ConsoleKey.RightArrow;
+            ConsoleKey upMoveCommand = ConsoleKey.UpArrow;
+            ConsoleKey downMoveCommand = ConsoleKey.DownArrow;
+            ConsoleKey leftMoveCommand = ConsoleKey.LeftArrow;
+            ConsoleKey reghtMoveCommand = ConsoleKey.RightArrow;
 
             int[] directionOfMovement = { 0, 0 };
 
-            if (pressedKey.Key == moveUpCommand)
+            if (pressedKey.Key == upMoveCommand)
             {
                 directionOfMovement[1] = -1;
             }
-            if (pressedKey.Key == moveDown)
+            if (pressedKey.Key == downMoveCommand)
             {
                 directionOfMovement[1] = 1;
             }
-            if (pressedKey.Key == moveLeft)
+            if (pressedKey.Key == leftMoveCommand)
             {
                 directionOfMovement[0] = -1;
             }
-            if (pressedKey.Key == moveReght)
+            if (pressedKey.Key == reghtMoveCommand)
             {
                 directionOfMovement[0] = 1;
             }
