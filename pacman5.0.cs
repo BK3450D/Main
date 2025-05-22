@@ -22,8 +22,8 @@ namespace movetest1
 
             int startingPositionX = 1;
             int startingPositionY = 1;
-            int nextPositionX;
-            int nextPositionY;
+            int nextPositionX = 0;
+            int nextPositionY = 0; ;
             int score = 0;
             int maxScore = 10;
 
@@ -44,7 +44,7 @@ namespace movetest1
 
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
 
-                GetNextPacmanPosition(pressedKey, startingPositionX, startingPositionY, out nextPositionX, out nextPositionY);
+                GetNextPacmanPosition(pressedKey, startingPositionX, startingPositionY, ref nextPositionX, ref nextPositionY);
 
                 if (CanMove(nextPositionX, nextPositionY, map, wall))
                 {
@@ -64,7 +64,7 @@ namespace movetest1
             }
         }
 
-        static void GetNextPacmanPosition(ConsoleKeyInfo pressedKey, int pacmanPositionX, int pacmanPositionY, out int nextPacmanPositionX, out int nextPacmanPositionY)
+        static void GetNextPacmanPosition(ConsoleKeyInfo pressedKey, int pacmanPositionX, int pacmanPositionY, ref int nextPacmanPositionX, ref int nextPacmanPositionY)
         {
             int[] direction = GetDirection(pressedKey);
 
@@ -78,18 +78,15 @@ namespace movetest1
             Console.WriteLine("Счёт: " + score);
         }
 
-        private static void DrawPlayer(int PositionX, int PositionY, char playerIcon, char[,] map)
+        private static void DrawPlayer(int positionX, int positionY, char playerIcon, char[,] map)
         {
-            Console.SetCursorPosition(PositionX, PositionY);
+            Console.SetCursorPosition(positionX, positionY);
             Console.Write(playerIcon);
             Console.SetCursorPosition(0, map.GetLength(0) + 1);
         }
 
         static bool CanMove(int nextPositionX, int nextPositionY, char[,] map, char wall)
         {
-            if (nextPositionX == wall || nextPositionY == wall)
-                return false;
-
             return map[nextPositionY, nextPositionX] != wall;
         }
 
@@ -99,11 +96,11 @@ namespace movetest1
             positionY = nextPositionY;
         }
 
-        private static int IncreaseScore(int x, int y, char money, char[,] map, int score, char emptyCell)
+        private static int IncreaseScore(int positionX, int positionY, char money, char[,] map, int score, char emptyCell)
         {
-            if (map[y, x] == money)
+            if (map[positionY, positionX] == money)
             {
-                score = CollectMoney(x, y, map, score, emptyCell);
+                score = CollectMoney(positionX, positionY, map, score, emptyCell);
             }
 
             return score;
