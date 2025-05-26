@@ -85,7 +85,7 @@ namespace Dictionary
             Console.WriteLine();
         }
 
-        static void IsWordPresent(Dictionary<string, string> explanatoryDictionary)
+        static void HowWordInDictionary(Dictionary<string, string> explanatoryDictionary)
         {
             if (explanatoryDictionary.Count == 0)
             {
