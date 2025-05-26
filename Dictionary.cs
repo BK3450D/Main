@@ -31,10 +31,10 @@ namespace Dictionary
                 switch (userInput)
                 {
                     case CommandAddWord:
-                        AddWord(ref explanatoryDictionary);
+                        AddWord(explanatoryDictionary);
                         break;
                     case CommandRemoveWord:
-                        RemoveWord(ref explanatoryDictionary);
+                        RemoveWord(explanatoryDictionary);
                         break;
                     case CommandFindWord:
                         FindWord(explanatoryDictionary);
@@ -49,7 +49,7 @@ namespace Dictionary
             }
         }
 
-        static private void AddWord(ref Dictionary<string, string> explanatoryDictionary)
+        static private void AddWord(Dictionary<string, string> explanatoryDictionary)
         {
             Console.Write("Введите слово которое хотите добавить: ");
             string userInputWord = Console.ReadLine();
@@ -60,7 +60,7 @@ namespace Dictionary
             explanatoryDictionary.Add(userInputWord, userInputWordMeaning);
         }
 
-        static private void RemoveWord(ref Dictionary<string, string> explanatoryDictionary)
+        static private void RemoveWord(Dictionary<string, string> explanatoryDictionary)
         {
             if (explanatoryDictionary.Count == 0)
             {
