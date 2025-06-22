@@ -27,14 +27,12 @@ namespace ConsoleApp2
                 {
                     numbers.Add(number);
                 }
-
                 else if (userInput == exitCommand)
                 {
                     numbers.Clear();
                     isWork = false;
                     Console.Clear();
                 }
-
                 else  if (userInput == sumCommand)
                 {
                     int nunberSum = numbers.Sum();
