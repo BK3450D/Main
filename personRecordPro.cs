@@ -11,7 +11,6 @@ namespace ConsoleApp4
             Dictionary<string, List<string>> dossiers = new Dictionary<string, List<string>>();
             List<Dictionary<string, string>> dossiers2 = new List<Dictionary<string, string>>();
 
-
             Console.CursorVisible = false;
 
             const int CommandOutDossier = 0;
