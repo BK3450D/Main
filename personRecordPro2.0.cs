@@ -24,7 +24,6 @@ namespace ConsoleApp4
               "Вывести досье",
               "Удалить досье",
               "Выход",
-
             };
 
             int selectedIndex = 0;
@@ -67,7 +66,6 @@ namespace ConsoleApp4
 
         private static void GetPressKey(ConsoleKeyInfo pressedKey, ref int selectedIndex, List<string> menuItems)
         {
-
             if (pressedKey.Key == ConsoleKey.UpArrow)
             {
                 selectedIndex--;
@@ -101,7 +99,6 @@ namespace ConsoleApp4
 
         static void RequestData(Dictionary<string, List<string>> dossiers)
         {
-
             Console.Write("Введите ФИО сотрудника: ");
             string fullName = Console.ReadLine();
 
@@ -181,7 +178,7 @@ namespace ConsoleApp4
                 {
                     Console.WriteLine($"ФИО: {fullName}");
                 }
-
+                
                 Console.WriteLine();
             }
         }
