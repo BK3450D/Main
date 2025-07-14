@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -9,14 +9,14 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            Dictionary<string, List<string>> dossiers = new Dictionary<string, List<string>>();
-
-            Console.CursorVisible = false;
-
             const int CommandOutDossier = 0;
             const int CommandShowDossier = 1;
             const int CommandDeleteDossier = 2;
             const int CommandExit = 3;
+
+            Console.CursorVisible = false;
+            
+            Dictionary<string, List<string>> dossiers = new Dictionary<string, List<string>>();
 
             List<string> menuItems = new List<string>()
             {
@@ -28,9 +28,9 @@ namespace ConsoleApp4
 
             int selectedIndex = 0;
 
-            bool isRunning = true;
+            bool isRun = true;
 
-            while (isRunning)
+            while (isRun)
             {
                 Console.Clear();
 
@@ -46,27 +46,32 @@ namespace ConsoleApp4
                     {
                         case CommandOutDossier:
                             RequestData(dossiers);
-                            Pause();
+
                             break;
                         case CommandShowDossier:
                             ShowAllDossier(dossiers);
-                            Pause();
+
                             break;
                         case CommandDeleteDossier:
                             DeleteDossier(dossiers);
-                            Pause();
+
                             break;
                         case CommandExit:
-                            isRunning = false;
+                            isRun = false;
                             break;
                     }
+                    
+                    Pause();
                 }
             }
         }
 
         private static void GetPressKey(ConsoleKeyInfo pressedKey, ref int selectedIndex, List<string> menuItems)
         {
-            if (pressedKey.Key == ConsoleKey.UpArrow)
+            ConsoleKey upMoveCommand = ConsoleKey.UpArrow;
+            ConsoleKey downMoveCommand = ConsoleKey.DownArrow;
+
+            if (pressedKey.Key == upMoveCommand)
             {
                 selectedIndex--;
 
@@ -75,9 +80,10 @@ namespace ConsoleApp4
                     selectedIndex = menuItems.Count - 1;
                 }
             }
-            else if (pressedKey.Key == ConsoleKey.DownArrow)
+            else if (pressedKey.Key == downMoveCommand)
             {
                 selectedIndex++;
+
                 if (selectedIndex >= menuItems.Count)
                 {
                     selectedIndex = 0;
@@ -162,6 +168,7 @@ namespace ConsoleApp4
                 Console.WriteLine($"Должность {position}была удалена из списка так как на ней нет сотрудников");
             }
         }
+
         static void ShowAllDossier(Dictionary<string, List<string>> dossiers)
         {
             if (dossiers.Count == 0)
@@ -178,7 +185,7 @@ namespace ConsoleApp4
                 {
                     Console.WriteLine($"ФИО: {fullName}");
                 }
-                
+
                 Console.WriteLine();
             }
         }
@@ -190,4 +197,3 @@ namespace ConsoleApp4
         }
     }
 }
-
