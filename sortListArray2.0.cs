@@ -23,7 +23,7 @@ namespace ConsoleApp6
             foreach (var nambers in listNambers)
             {
                 Console.Write(nambers + " | ");
-            }
+            }           
         }
 
         static void GetListArray(List<int> listNambers, int[] arrayNambers)
@@ -40,7 +40,7 @@ namespace ConsoleApp6
                 if (listNambers.Contains(number) == false)
                 {
                     listNambers.Add(number);
-                }
+                }       
             }
         }
 
