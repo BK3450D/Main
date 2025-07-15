@@ -5,8 +5,6 @@ namespace ConsoleApp6
 {
     internal class Program
     {
-        static Random random = new Random();
-
         static void Main(string[] args)
         {
             int[] arrayNumbers1 = new int[] { 1, 2, 3, 5 };
