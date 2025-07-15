@@ -19,6 +19,7 @@ namespace ConsoleApp6
             listNambers.Sort();
 
             Console.Write("\nОтсортированный список: ");
+            
             foreach (var nambers in listNambers)
             {
                 Console.Write(nambers + " | ");
@@ -27,8 +28,8 @@ namespace ConsoleApp6
 
         static void GetListArray(List<int> listNambers, int[] arrayNambers)
         {
-            Console.Write("Массив: ");
-            GetArrayNumbers(arrayNambers);
+            Console.Write("Массив: ");            
+            PrintNumbers(arrayNambers);
             CombineArrays(listNambers, arrayNambers);
         }
 
@@ -43,7 +44,7 @@ namespace ConsoleApp6
             }
         }
 
-        static void GetArrayNumbers(int[] arrayNumbers)
+        static void PrintNumbers(int[] arrayNumbers)
         {
             foreach (var item in arrayNumbers)
             {
