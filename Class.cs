@@ -26,7 +26,7 @@ namespace ConsoleApp6
         public int Armor;
         public int Damage;
 
-        public Player()
+        private Player()
         {
             Health = MaxHealth;
             Armor = MaxArmor;
@@ -55,4 +55,3 @@ namespace ConsoleApp6
         }
     }
 }
-
