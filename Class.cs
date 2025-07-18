@@ -9,7 +9,7 @@ namespace ConsoleApp6
         {
             Player player = new Player(1111, 110, 119);
 
-            player.ShowInfo();        
+            player.ShowInfo();
         }
     }
 
@@ -22,9 +22,9 @@ namespace ConsoleApp6
         private const int MaxDamage = 10;
         private const int MinDamage = 0;
 
-        public int Health { get; private set; }
-        public int Armor { get; private set; }
-        public int Damage { get; private set; }
+        public int Health;
+        public int Armor;
+        public int Damage;
 
         public Player()
         {
@@ -45,7 +45,7 @@ namespace ConsoleApp6
             Console.WriteLine($"Здоровье: {Health}\nБроня: {Armor}\nУрон: {Damage} ");
         }
 
-        public int GetBasicParameters(int value, int minValue, int maxValue)
+        private int GetBasicParameters(int value, int minValue, int maxValue)
         {
             if (value > MaxHealth)
                 return maxValue;
