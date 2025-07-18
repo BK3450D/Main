@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleApp6
@@ -7,48 +7,52 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            Player player = new Player(55, 110, 119);
+            Player player = new Player(1111, 110, 119);
 
-            player.ShowPlayerInfo();
+            player.ShowInfo();        
         }
     }
 
     class Player
-    {  
-        public int Healt { get; private set; }
-        public int Arrmor { get; private set; }
+    {
+        private const int MaxHealth = 100;
+        private const int MinHealth = 0;
+        private const int MaxArmor = 5;
+        private const int MinArmor = 0;
+        private const int MaxDamage = 10;
+        private const int MinDamage = 0;
+
+        public int Health { get; private set; }
+        public int Armor { get; private set; }
         public int Damage { get; private set; }
-
-        public Player(int healt, int arrmor, int damage)
-        {
-            if (healt > 100)
-                Healt = 100;
-            else
-                Healt = healt;
-
-            if (arrmor > 10)
-                Arrmor = 10;
-            else
-
-                Arrmor = arrmor;
-            if (damage > 20)
-                Damage = 20;
-            else
-                Damage = damage;
-        }
 
         public Player()
         {
-            Healt = 100;
-            Arrmor = 5;
-            Damage = 10;
+            Health = MaxHealth;
+            Armor = MaxArmor;
+            Damage = MaxDamage;
         }
 
-        public void ShowPlayerInfo()
+        public Player(int healt, int armor, int damage)
         {
-            Console.WriteLine($"Здоровье: {Healt}\nБроня: {Arrmor}\nУрон: {Damage} ");
+            Health = GetBasicParameters(healt, MinHealth, MaxHealth);
+            Armor = GetBasicParameters(armor, MinArmor, MaxArmor);
+            Damage = GetBasicParameters(damage, MinDamage, MaxDamage);
+        }
+
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Здоровье: {Health}\nБроня: {Armor}\nУрон: {Damage} ");
+        }
+
+        public int GetBasicParameters(int value, int minValue, int maxValue)
+        {
+            if (value > MaxHealth)
+                return maxValue;
+            if (value < minValue)
+                return minValue;
+            return value;
         }
     }
 }
-
 
