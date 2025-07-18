@@ -24,27 +24,27 @@ namespace ConsoleApp6
         private const int MaxDamage = 10;
         private const int MinDamage = 0;
 
-        private int Health;
-        private int Armor;
-        private int Damage;
+        private int _health;
+        private int _armor;
+        private int _damage;
 
         public Player()
         {
-            Health = MaxHealth;
-            Armor = MaxArmor;
-            Damage = MaxDamage;
+            _health = MaxHealth;
+            _armor = MaxArmor;
+            _damage = MaxDamage;
         }
 
         public Player(int healt, int armor, int damage)
         {
-            Health = GetBasicParameters(healt, MinHealth, MaxHealth);
-            Armor = GetBasicParameters(armor, MinArmor, MaxArmor);
-            Damage = GetBasicParameters(damage, MinDamage, MaxDamage);
+            _health = GetBasicParameters(healt, MinHealth, MaxHealth);
+            _armor = GetBasicParameters(armor, MinArmor, MaxArmor);
+            _damage = GetBasicParameters(damage, MinDamage, MaxDamage);
         }
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Здоровье: {Health}\nБроня: {Armor}\nУрон: {Damage} ");
+            Console.WriteLine($"Здоровье: {_health}\nБроня: {_armor}\nУрон: {_damage} ");
         }
 
         private int GetBasicParameters(int value, int minValue, int maxValue)
