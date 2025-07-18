@@ -7,9 +7,11 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            Player player = new Player(1111, 110, 119);
-
+            Player player = new Player(88,3,5);
             player.ShowInfo();
+
+            Player player2 = new Player();
+            player2.ShowInfo();           
         }
     }
 
@@ -22,11 +24,11 @@ namespace ConsoleApp6
         private const int MaxDamage = 10;
         private const int MinDamage = 0;
 
-        public int Health;
-        public int Armor;
-        public int Damage;
+        private int Health;
+        private int Armor;
+        private int Damage;
 
-        private Player()
+        public Player()
         {
             Health = MaxHealth;
             Armor = MaxArmor;
