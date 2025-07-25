@@ -10,9 +10,9 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            Database dataBase = new Database();
-            
             Console.CursorVisible = false;
+            
+            Database dataBase = new Database();
             DatabaseView menu = new DatabaseView();
             menu.Work();
         }
