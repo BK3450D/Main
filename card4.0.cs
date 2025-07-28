@@ -17,7 +17,6 @@ namespace SimpleCardGame
             if (TryGetNumbers(maxCard, out input))
             {
                 dealer.DealCards(player, input);
-
                 player.ShowHand();
             }
         }
