@@ -22,7 +22,6 @@ namespace SimpleCardGame
                 if (TryGetNumbers(out input))
                 {
                     dealer.DealCards(player, input);
-
                     player.ShowHand();
                 }
             }
@@ -35,7 +34,6 @@ namespace SimpleCardGame
 
             Console.Write($"Введите количество карт для раздачи от {minCard} до {maxCard}: ");
             string input = Console.ReadLine();
-
 
             if (int.TryParse(input, out number))
             {
@@ -150,7 +148,6 @@ namespace SimpleCardGame
 
     class Dealer
     {
-
         public Dealer()
         {
             Deck = new Deck();
