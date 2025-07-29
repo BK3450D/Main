@@ -67,7 +67,8 @@ namespace SimpleCardGame
     {
         private List<Card> _cards;
 
-        public int GetCountCards => _cards.Count;
+        public int сountCards => _cards.Count;
+        
         public Deck()
         {
             Create();
@@ -120,6 +121,7 @@ namespace SimpleCardGame
     class Player
     {
         private List<Card> _hand;
+        
         public Player()
         {
             _hand = new List<Card>();
@@ -144,11 +146,12 @@ namespace SimpleCardGame
     class Dealer
     {
         private Deck _deck;
+        
         public Dealer()
         {
             _deck = new Deck();
         }
-        public int GetCountCards => _deck.GetCountCards;
+        public int countCards => _deck.сountCards;
 
         public void DealCards(Player player, int numberCards)
         {
