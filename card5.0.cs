@@ -14,7 +14,6 @@ namespace SimpleCardGame
 
             var maxCard = dealer.GetCountCards;
 
-
             if (TryGetNumbers(maxCard, out input))
             {
                 dealer.DealCards(player, input);
