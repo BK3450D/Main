@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace SimpleCardGame
@@ -12,7 +12,7 @@ namespace SimpleCardGame
             Dealer dealer = new Dealer();
             Player player = new Player();
 
-            var maxCard = dealer.GetCountCards;
+            var maxCard = dealer.countCards;
 
             if (TryGetNumbers(maxCard, out input))
             {
@@ -68,7 +68,7 @@ namespace SimpleCardGame
         private List<Card> _cards;
 
         public int сountCards => _cards.Count;
-        
+
         public Deck()
         {
             Create();
@@ -121,7 +121,7 @@ namespace SimpleCardGame
     class Player
     {
         private List<Card> _hand;
-        
+
         public Player()
         {
             _hand = new List<Card>();
@@ -146,7 +146,7 @@ namespace SimpleCardGame
     class Dealer
     {
         private Deck _deck;
-        
+
         public Dealer()
         {
             _deck = new Deck();
