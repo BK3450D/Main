@@ -11,7 +11,6 @@ namespace ConsoleApp2
             menu.Work();
         }
 
-
         class Product
         {
             public string Name { get; set; }
@@ -28,6 +27,7 @@ namespace ConsoleApp2
                 return $"{Name} - {Price}$";
             }
         }
+        
         class Shop
         {
             private List<Product> _products = new List<Product>();
@@ -58,7 +58,7 @@ namespace ConsoleApp2
             }
         }
 
-        abstract class User
+        class User
         {
             public int Money { get; protected set; }
 
@@ -80,6 +80,7 @@ namespace ConsoleApp2
                 return false;
             }
         }
+        
         class Buyer : User
         {
             public List<Product> ProductBasket { get; private set; } = new List<Product>();
@@ -125,7 +126,7 @@ namespace ConsoleApp2
                     Console.Write($"Общая стоимость : {total}$");
                 }
             }
-            public void ShowProductBasketWithPause()
+            public void ShowProducBasket()
             {
                 ShowProductBasket();
                 Console.WriteLine();
@@ -216,7 +217,6 @@ namespace ConsoleApp2
                     if (seller.GetAvailableProducts().Count == 0)
                     {
                         Console.Clear();
-                        Console.WriteLine("Загрузка новых товаров...");
                         Pause();
                         seller.RestockProducts();
                         selectedIndex = 0;
@@ -229,7 +229,7 @@ namespace ConsoleApp2
                     var products = seller.GetAvailableProducts();
                     DrawProducts(products, selectedIndex);
 
-                    buyer.ShowProductBasketWithPause();
+                    buyer.ShowProducBasket();
 
                     ConsoleKeyInfo key = Console.ReadKey(true);
 
@@ -248,8 +248,10 @@ namespace ConsoleApp2
                             Pause();
                     }
                 }
-                buyer.ShowProductBasketWithPause();
+                
+                buyer.ShowProducBasket();
             }
         }
     }
 }
+
