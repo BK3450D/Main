@@ -140,7 +140,7 @@ namespace ColiseumGame
 
         protected override int CalculateDamage()
         {
-            int damage = Damage;
+            int damage = base.CalculateDamage();
 
             if (UserUtils.RollChance(CriticalChance))
             {
@@ -554,15 +554,10 @@ namespace ColiseumGame
                         break;
 
                     case ConfirmKey:
+                        selectedFighter = SelectCurrentFighter(selectedIndex);
 
-                        Fighter fighter = _fighters[selectedIndex].Clone();
-
-                        if (ConfirmSelection(fighter))
-                        {
-                            selectedFighter = fighter;
+                        if (selectedFighter != null)
                             isSelecting = false;
-                        }
-
                         break;
 
                     case CancelKey:
@@ -571,6 +566,16 @@ namespace ColiseumGame
                 }
             }
             return selectedFighter;
+        }
+
+        private Fighter SelectCurrentFighter(int selectedIndex)
+        {
+            Fighter fighter = _fighters[selectedIndex].Clone();
+
+            if (ConfirmSelection(fighter))
+                return fighter;
+
+            return null;
         }
 
         private bool ConfirmSelection(Fighter fighter)
